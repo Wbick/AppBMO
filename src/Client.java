@@ -42,4 +42,8 @@ public class Client {
     public Integer getClientId() {
         return clientId;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9b6f26c25dc00416c4a59f0ec2632357c303eb77

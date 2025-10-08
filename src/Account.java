@@ -1,13 +1,13 @@
 import java.util.*;
 
-public abstract class Account {
+public class Account {
     
     //account number
-    private String accountNum;
+    protected String accountNum;
     //account balence
-    private double balance;
+    protected double balance;
     //date account was opened
-    private Date accoutnOpened;
+    protected Date accoutnOpened;
 
 
     //constructor
