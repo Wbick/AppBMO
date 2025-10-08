@@ -1,8 +1,10 @@
-public class InvestmentAccount extends Account{
+public class SavingAccount extends Account{
     private String nickname;
+    private double interest;
         
-    public InvestmentAccount(int accNum){
+    public SavingAccount(int accNum){
         super(accNum);
+        interest = 0;
         nickname = null;
     }
 
@@ -11,6 +13,12 @@ public class InvestmentAccount extends Account{
     }
     public String getNickname(){
         return nickname;
+    }
+    public void setInterest(double i) {
+        interest = i;
+    }
+    public double getInterest(){
+        return interest;
     }
 
     public void getDetails(){
