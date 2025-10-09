@@ -1,25 +1,38 @@
 
 public class LoanAccount extends Account {
 
-private double intrestRate;
+    private double intrestRate;
 
-public LoanAccount() {
-    intrestRate = 5.00;
-    
-}
+    public LoanAccount(String accountNum) {
+        super(accountNum);
+        intrestRate = 5.00;
 
-public loanaccount(double intrestrate){
-    this.intrestrate = intrestrate;
-}
+    }
 
-public loanaccount(double intrestrate, double balance ){
-    this.intrestrate = intrestrate;
-    super(balance);
+    public LoanAccount(double intrestRate, String accountNum) {
+        super(accountNum);
+        this.intrestRate = intrestRate;
+    }
 
+    public void setInterest(double i) {
+        intrestRate = i;
+    }
 
-public applyInterest(){
-     super.accountBalance = intrestRate * super.accountBalance;
-}
+    public double getInterest() {
+        return intrestRate;
+    }
 
+    @Override
+    public void applyInterest() {
+        super.setBalance(intrestRate * super.getBalance());
+    }
+
+    @Override
+    public void getDetails(){
+        System.out.println("Account Details:\nAccount Number: "+getAccountNum()+
+        "\nAccount Balence: "+getBalance()+
+        "\nIntrest Rate: "+ getInterest()+
+        "\nDate Opened: "+getAccountOpened());
+    }
 
 }

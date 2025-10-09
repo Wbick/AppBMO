@@ -1,50 +1,63 @@
 import java.util.*;
 
-public class Account {
+public  class Account {
     
     //account number
     protected String accountNum;
     //account balence
     protected double balance;
     //date account was opened
-    protected Date accoutnOpened;
+    protected Date accountOpened;
 
 
     //constructor
-    public Account(int accNum){
-        accNum = accNum;
+    public Account(String accNum){
+        accountNum = accNum;
         balance = 0.0;
-        accoutnOpened = new Date();
+        accountOpened = new Date();
     }
-
+    
+   public Account(String accNum, double balance){
+        accountNum = accNum;
+        this.balance = balance;
+        accountOpened = new Date();
+    }
     //set and get
-    public void setBalence(double b){
+    public void setBalance(double b){
         balance = b;
     }
-    public double getBalence(){
+    public double getBalance(){
         return balance;
     }
     public String getAccountNum(){
         return accountNum;
     }
     public Date getAccountOpened(){
-        return accoutnOpened;
+        return accountOpened;
     }
+    public  void setNickname(String name) {
+    }
+    public  String getNickname(){
+        return null;
+    }
+    public  void applyInterest(){
+    }
+
 
     //adds more money to balence
     public void deposit(double amount){
-        setBalence(getBalence()+amount);
+        setBalance(getBalance()+amount);
     }
 
     //removes money from balence
     public double withdraw(double amount){
-        setBalence(getBalence()-amount);
-        return getBalence();
+        setBalance(getBalance()-amount);
+        return getBalance();
     }
 
     public void getDetails(){
         System.out.println("Account Details:\nAccount Number: "+getAccountNum()
-        +"\nAccount Balence: "+getBalence()+"\nDate Opened: "+getAccountOpened());
+        +"\nAccount Balence: "+getBalance()+"\nDate Opened: "+getAccountOpened());
     }
 
 
